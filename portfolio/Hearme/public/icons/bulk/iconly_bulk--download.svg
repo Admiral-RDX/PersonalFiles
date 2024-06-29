@@ -1,0 +1,17 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_9669">
+			<rect id="Iconly/Bulk/Download" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Bulk/Download" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_9669)">
+		<g opacity="0.400000" style="mix-blend-mode:normal">
+			<path id="Fill 1" d="M17.55 7.29C20 7.29 22 9.35 22 11.88L22 16.91C22 19.44 20.01 21.5 17.56 21.5L6.44 21.5C3.99 21.5 2 19.44 2 16.9L2 11.87C2 9.35 3.99 7.29 6.43 7.29L7.37 7.29L17.55 7.29Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+		<path id="Fill 4" d="M12.54 16.03L15.45 13.06C15.75 12.76 15.75 12.26 15.45 11.96C15.15 11.65 14.66 11.65 14.36 11.96L12.77 13.59L12.77 3.28C12.77 2.85 12.42 2.5 12 2.5C11.57 2.5 11.23 2.85 11.23 3.28L11.23 13.59L9.63 11.96C9.33 11.65 8.85 11.65 8.54 11.96C8.39 12.11 8.32 12.31 8.32 12.51C8.32 12.71 8.39 12.91 8.54 13.06L11.45 16.03C11.6 16.18 11.79 16.26 12 16.26C12.2 16.26 12.4 16.18 12.54 16.03Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

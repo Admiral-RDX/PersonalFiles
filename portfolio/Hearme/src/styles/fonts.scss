@@ -1,0 +1,149 @@
+.heading {
+	&__h1 {
+		font-weight: bold;
+		font-size: 3rem;
+	}
+
+	&__h2 {
+		font-weight: bold;
+		font-size: 2.5rem;
+	}
+
+	&__h3 {
+		font-weight: bold;
+		font-size: 2rem;
+	}
+
+	&__h4 {
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+
+	&__h5 {
+		font-weight: bold;
+		font-size: 1.25rem;
+	}
+
+	&__h6 {
+		font-weight: bold;
+		font-size: 1.125rem;
+	}
+}
+
+.body {
+	&--xl,
+	&--xl-semibold,
+	&--xl-medium,
+	&--xl-regular {
+		font-size: 1.25rem;
+	}
+
+	&--l,
+	&--l-semibold,
+	&--l-medium,
+	&--l-regular {
+		font-size: 1rem;
+	}
+
+	&--m,
+	&--m-semibold,
+	&--m-medium,
+	&--m-regular {
+		font-size: 0.875rem;
+	}
+
+	&--s,
+	&--s-semibold,
+	&--s-medium,
+	&--s-regular {
+		font-size: 0.75rem;
+	}
+
+	&--sm,
+	&--sm-semibold,
+	&--sm-medium,
+	&--sm-regular {
+		font-size: 0.625rem;
+	}
+
+	// Font weights
+	&--xl {
+		font-weight: bold;
+	}
+
+	&--xl-semibold {
+		font-weight: 600; // Semibold
+	}
+
+	&--xl-medium {
+		font-weight: 500; // Medium
+	}
+
+	&--xl-regular {
+		font-weight: 400; // Regular
+	}
+
+	&--l {
+		font-weight: bold;
+	}
+
+	&--l-semibold {
+		font-weight: 600; // Semibold
+	}
+
+	&--l-medium {
+		font-weight: 500; // Medium
+	}
+
+	&--l-regular {
+		font-weight: 400; // Regular
+	}
+
+	&--m {
+		font-weight: bold;
+	}
+
+	&--m-semibold {
+		font-weight: 600; // Semibold
+	}
+
+	&--m-medium {
+		font-weight: 500; // Medium
+	}
+
+	&--m-regular {
+		font-weight: 400; // Regular
+	}
+
+	&--s {
+		font-weight: bold;
+	}
+
+	&--s-semibold {
+		font-weight: 600; // Semibold
+	}
+
+	&--s-medium {
+		font-weight: 500; // Medium
+	}
+
+	&--s-regular {
+		font-weight: 400; // Regular
+	}
+
+	&--sm {
+		font-weight: bold;
+	}
+
+	&--sm-semibold {
+		font-weight: 600; // Semibold
+	}
+
+	&--sm-medium {
+		font-weight: 500; // Medium
+	}
+
+	&--sm-regular {
+		font-weight: 400; // Regular
+	}
+}

@@ -1,0 +1,96 @@
+:root {
+	// Main
+	--primary-500: #06C149;
+	--primary-400: #38CD6D;
+	--primary-300: #6ADA92;
+	--primary-200: #9BE6B6;
+	--primary-100: #E6F9ED;
+
+	--secondary-500: #FFD300;
+	--secondary-400: #FFDC33;
+	--secondary-300: #FFDC33;
+	--secondary-200: #FFED99;
+	--secondary-100: #FFFBE6;
+
+	// Alert & Status
+	--AS-success: #0ABE75;
+	--AS-info: #246BFD;
+	--AS-warning: #FACC15;
+	--AS-error: #F75555;
+	--AS-disabled: #D8D8D8;
+	--AS-disabled-button: #0E9E42;
+
+	// Grey scale
+	--grey-scale-900: #212121;
+	--grey-scale-800: #424242;
+	--grey-scale-700: #616161;
+	--grey-scale-600: #757575;
+	--grey-scale-500: #9E9E9E;
+	--grey-scale-400: #BDBDBD;
+	--grey-scale-300: #E0E0E0;
+	--grey-scale-200: #EEEEEE;
+	--grey-scale-100: #F5F5F5;
+	--grey-scale-50: #FAFAFA;
+
+	// Gradients
+	--gradient-green: linear-gradient(to left top, #06c149, #17cb54, #22d65f, #2be06a, #33eb75);
+	--gradient-yellow: linear-gradient(to left top, #facc15, #fbd23b, #fcd954, #fedf6b, #ffe580);
+	--gradient-purple: linear-gradient(to left top, #9610ff, #9d24ff, #a332ff, #a93eff, #af48ff);
+	--gradient-blue: linear-gradient(to left top, #335ef7, #3f67f9, #4a70fb, #5579fd, #5f82ff);
+	--gradient-orange: linear-gradient(to left top, #fb9400, #fc9a15, #fda023, #fea52e, #ffab38);
+	--gradient-red: linear-gradient(to left top, #ff4d67, #ff5e75, #ff6e82, #ff7c8f, #ff8a9b);
+
+	// Dark colors
+	--dark-one: #181A20;
+	--dark-two: #1F222A;
+	--dark-three: #35383F;
+
+	// otherss
+	--others-white: #FFFFFF;
+	--others-black: #000000;
+	--others-red: #F44336;
+	--others-pink: #E91E63;
+	--others-purple: #9C27B0;
+	--others-deep-purple: #673AB7;
+	--others-indigo: #3F51B5;
+	--others-blue: #2196F3;
+	--others-light-blue: #03A9F4;
+	--others-cyan: #00BCD4;
+	--others-teal: #009688;
+	--others-green: #4CAF50;
+	--others-light-green: #8BC34A;
+	--others-lime: #CDDC39;
+	--others-yellow: #FFEB3B;
+	--others-amber: #FFC107;
+	--others-orange: #FF9800;
+	--others-deep-orange: #FF5722;
+	--others-brown: #795548;
+	--others-blue-grey: #607D8B;
+
+	// Background
+	--background-green: #F5FFF9;
+	--background-purple: #F7ECFF;
+	--background-blue: #F6FAFD;
+	--background-orange: #FFF8ED;
+	--background-pink: #FFF5F5;
+	--background-yellow: #FFFEE0;
+
+	// Transparent
+	--transparent-green: rgba(6, 193, 73, 0.08);
+	--transparent-yellow: rgba(250, 204, 21, 0.08);
+	--transparent-purple: rgba(150, 16, 255, 0.08);
+	--transparent-blue: rgba(51, 94, 247, 0.08);
+	--transparent-orange: rgba(255, 152, 0, 0.08);
+	--transparent-red: rgba(247, 85, 85, 0.08);
+	--transparent-cyan: rgba(0, 188, 212, 0.08);
+}
+
+html[data-theme="dark"] {
+	background-color: var(--dark-one);
+	color: var(--others-white);
+}
+
+html[data-theme="light"] {
+	background-color: var(--others-white);
+	color: var(--grey-scale-900);
+}

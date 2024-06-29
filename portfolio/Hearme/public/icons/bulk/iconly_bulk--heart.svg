@@ -1,0 +1,18 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_9900">
+			<rect id="Iconly/Bulk/Heart" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Bulk/Heart" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_9900)">
+		<g opacity="0.400000" style="mix-blend-mode:normal">
+			<path id="Path_34179" d="M11.77 21.83C9.49 20.42 7.37 18.76 5.44 16.87C4.09 15.53 3.05 13.89 2.41 12.07C1.27 8.53 2.6 4.48 6.3 3.28C8.25 2.67 10.37 3.05 12 4.29C13.63 3.05 15.76 2.67 17.71 3.28C21.41 4.48 22.74 8.53 21.6 12.07C20.97 13.88 19.94 15.53 18.59 16.87C16.66 18.76 14.54 20.42 12.26 21.83L12.01 22L11.77 21.83Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+		<path id="Path_34178" d="M12.01 22L11.77 21.83C9.49 20.42 7.36 18.76 5.43 16.87C4.07 15.53 3.03 13.89 2.39 12.07C1.26 8.53 2.58 4.48 6.28 3.28C8.23 2.67 10.38 3.05 12.01 4.31L12.01 22Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Path_34180" d="M18.23 9.99C18.02 9.98 17.84 9.88 17.71 9.72C17.58 9.55 17.52 9.34 17.54 9.13C17.56 8.42 17.16 7.78 16.55 7.53C16.16 7.43 15.92 7 16.02 6.59C16.11 6.18 16.49 5.92 16.88 6.01C16.93 6.02 16.98 6.04 17.02 6.07C18.26 6.54 19.06 7.82 18.99 9.22C18.99 9.43 18.91 9.63 18.76 9.78C18.62 9.93 18.42 10 18.23 9.99Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

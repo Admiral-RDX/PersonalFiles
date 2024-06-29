@@ -1,0 +1,23 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_9503">
+			<rect id="Iconly/Bulk/Arrow - Right 3" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Bulk/Arrow - Right 3" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_9503)">
+		<rect id="Iconly/Bulk/Arrow - Right 3" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+		<g opacity="0.400000" style="mix-blend-mode:normal">
+			<path id="Fill 1" d="M3.71 11.34L12.18 11.34C12.58 11.34 12.89 11.65 12.89 12.05C12.89 12.44 12.58 12.76 12.18 12.76L3.71 12.76C3.31 12.76 3 12.44 3 12.05C3 11.65 3.31 11.34 3.71 11.34Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+		<mask id="mask4_3058" mask-type="alpha" maskUnits="userSpaceOnUse" x="11.478516" y="6.603271" width="8.939453" height="10.896484">
+			<path id="Clip 4" d="M11.47 17.49L11.47 6.6L20.41 6.6L20.41 17.49L11.47 17.49Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</mask>
+		<g mask="url(#mask4_3058)">
+			<path id="Fill 3" d="M12.18 6.6C12.32 6.6 12.45 6.64 12.56 6.71L20.08 11.44C20.29 11.58 20.41 11.8 20.41 12.05C20.41 12.29 20.29 12.52 20.08 12.65L12.56 17.39C12.34 17.52 12.07 17.53 11.84 17.41C11.61 17.28 11.47 17.04 11.47 16.78L11.47 7.31C11.47 7.05 11.61 6.81 11.84 6.69C11.95 6.63 12.07 6.6 12.18 6.6Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+</svg>

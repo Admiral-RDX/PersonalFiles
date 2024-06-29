@@ -1,0 +1,25 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_8777">
+			<rect id="Iconly/Light-Outline/Profile" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Light-Outline/Profile" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_8777)">
+		<mask id="mask430_8780" mask-type="alpha" maskUnits="userSpaceOnUse" x="4.000000" y="14.496094" width="15.839844" height="7.374023">
+			<path id="Clip 2" d="M4 14.49L19.83 14.49L19.83 21.87L4 21.87L4 14.49Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</mask>
+		<g mask="url(#mask430_8780)">
+			<path id="Fill 1" d="M4 18.1731C4 21.8701 9.96191 21.8701 11.9209 21.8701C15.3201 21.8701 19.8401 21.4891 19.8401 18.1931C19.8401 14.4961 13.8799 14.4961 11.9209 14.4961C8.521 14.4961 4 14.8771 4 18.1731ZM5.5 18.1731C5.5 16.7281 7.65991 15.9961 11.9209 15.9961C16.1809 15.9961 18.3401 16.7351 18.3401 18.1931C18.3401 19.6381 16.1809 20.3701 11.9209 20.3701C7.65991 20.3701 5.5 19.6311 5.5 18.1731Z" clip-rule="evenodd" fill="#212121" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+		<mask id="mask430_8785" mask-type="alpha" maskUnits="userSpaceOnUse" x="6.609863" y="2.000122" width="10.620117" height="10.618652">
+			<path id="Clip 5" d="M6.6 2L17.23 2L17.23 12.61L6.6 12.61L6.6 2Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</mask>
+		<g mask="url(#mask430_8785)">
+			<path id="Fill 4" d="M11.8889 12.6188L11.9209 12.6188C14.8489 12.6188 17.23 10.2378 17.23 7.30981C17.23 4.38171 14.8489 1.99976 11.9209 1.99976C8.99194 1.99976 6.60986 4.38171 6.60986 7.30676C6.59985 10.2268 8.9668 12.6097 11.8889 12.6188ZM11.9209 3.42773C9.77979 3.42773 8.03784 5.1687 8.03784 7.30981C8.03101 9.44373 9.76001 11.1837 11.8918 11.1918L11.9209 11.9058L11.9209 11.1918C14.0608 11.1918 15.802 9.44971 15.802 7.30981C15.802 5.1687 14.0608 3.42773 11.9209 3.42773Z" clip-rule="evenodd" fill="#212121" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+	</g>
+</svg>

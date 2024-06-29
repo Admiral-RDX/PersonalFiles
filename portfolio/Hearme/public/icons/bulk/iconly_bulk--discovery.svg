@@ -1,0 +1,17 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_9694">
+			<rect id="Iconly/Bulk/Discovery" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Bulk/Discovery" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_9694)">
+		<g opacity="0.400000" style="mix-blend-mode:normal">
+			<path id="Fill 1" d="M22 12C22 17.52 17.52 22 12 22C6.47 22 2 17.52 2 12C2 6.47 6.47 2 12 2C17.52 2 22 6.47 22 12Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+		<path id="Fill 4" d="M15.85 8.7L14.23 13.82C14.17 14.03 14 14.2 13.79 14.26L8.69 15.86C8.35 15.97 8.02 15.64 8.13 15.3L9.73 10.17C9.79 9.96 9.96 9.8 10.17 9.73L15.29 8.13C15.64 8.02 15.96 8.35 15.85 8.7Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_9795">
+			<rect id="Iconly/Bulk/Volume Down" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Bulk/Volume Down" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_9795)">
+		<path id="Fill 1" d="M15.37 6.45C15.32 5.96 15.26 5.45 15.13 4.95C14.78 3.75 13.81 3 12.76 3C12.18 2.99 11.44 3.35 11.03 3.71L7.56 6.61L5.75 6.61C4.42 6.61 3.34 7.64 3.14 9.12C2.97 10.55 2.93 13.23 3.14 14.8C3.33 16.37 4.35 17.38 5.75 17.38L7.56 17.38L11.09 20.32C11.46 20.63 12.1 20.99 12.68 20.99C12.72 21 12.75 21 12.79 21C13.85 21 14.79 20.22 15.14 19.01C15.28 18.5 15.32 18.02 15.37 17.56L15.41 17.1C15.59 15.62 15.59 8.36 15.41 6.89L15.37 6.45Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<g opacity="0.400000" style="mix-blend-mode:normal">
+			<path id="Fill 4" d="M19.42 6.49C19.13 6.07 18.56 5.96 18.14 6.25C17.73 6.55 17.62 7.14 17.91 7.56C18.72 8.74 19.16 10.32 19.16 12C19.16 13.67 18.72 15.25 17.91 16.43C17.62 16.85 17.73 17.44 18.14 17.74C18.3 17.85 18.48 17.9 18.67 17.9C18.97 17.9 19.25 17.75 19.42 17.5C20.44 16.01 21 14.05 21 12C21 9.94 20.44 7.98 19.42 6.49Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+</svg>

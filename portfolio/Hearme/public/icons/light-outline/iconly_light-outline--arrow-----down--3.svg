@@ -1,0 +1,20 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_9028">
+			<rect id="Iconly/Light-Outline/Arrow - Down 3" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Light-Outline/Arrow - Down 3" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_9028)">
+		<path id="Fill 1" d="M11.75 13.45C11.33 13.45 11 13.11 11 12.7L11 3.75C11 3.33 11.33 3 11.75 3C12.16 3 12.5 3.33 12.5 3.75L12.5 12.7C12.5 13.11 12.16 13.45 11.75 13.45Z" fill="#212121" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<mask id="mask430_9032" mask-type="alpha" maskUnits="userSpaceOnUse" x="6.000000" y="11.950195" width="11.501953" height="9.436523">
+			<path id="Clip 4" d="M6 11.95L17.5 11.95L17.5 21.38L6 21.38L6 11.95Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</mask>
+		<g mask="url(#mask430_9032)">
+			<path id="Fill 3" d="M11.1165 21.0363C11.2546 21.2552 11.4937 21.3872 11.7515 21.3872C12.0085 21.3872 12.2485 21.2552 12.3855 21.0363L17.3865 13.0992C17.5325 12.8691 17.5415 12.5771 17.4084 12.3381C17.2766 12.0981 17.0256 11.9502 16.7524 11.9502L6.75049 11.9502C6.47656 11.9502 6.22559 12.0981 6.09351 12.3381C5.96167 12.5771 5.96948 12.8691 6.11548 13.0992L11.1165 21.0363ZM11.7515 19.2292L8.10962 13.4502L15.3926 13.4502L11.7515 19.2292Z" clip-rule="evenodd" fill="#212121" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+	</g>
+</svg>

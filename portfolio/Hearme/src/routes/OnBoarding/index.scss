@@ -1,0 +1,168 @@
+.onboarding-container {
+	display: flex;
+	overflow-x: auto;
+	height: 100dvh;
+	box-sizing: border-box;
+	touch-action: pan-y;
+	scrollbar-width: none;
+
+	.loading-page, .walkthrough, .lets-you-in, .sign-up {
+		width: 100vw;
+		flex: none;
+		scroll-snap-align: center;
+		box-sizing: border-box;
+	}
+}
+
+.loading-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100dvh;
+	align-items: center;
+
+	img:last-child {
+		max-width: 4rem;
+	}
+}
+
+.walkthrough {
+	img {
+		margin-top: calc(100dvh - 50rem);
+		width: 100vw;
+	}
+
+	&__content {
+		position: relative;
+		top: -3.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		padding: 3rem 1.5rem;
+		border-top-right-radius: 3.75rem;
+		border-top-left-radius: 3.75rem;
+		background-color: var(--others-white);
+		width: 100%;
+		box-sizing: border-box;
+		text-align: center;
+
+		p {
+			display: ruby;
+
+			div:nth-child(2) {
+				margin-right: 1rem;
+				color: var(--primary-500);
+			}
+		}
+	}
+}
+
+.lets-you-in {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 1.5rem 3rem 1.5rem;
+	box-sizing: border-box;
+
+	.main-image {
+		max-width: 240px;
+	}
+}
+
+.walk-in-ways {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	&--next {
+		display: flex;
+		flex: inherit;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		gap: 1.25rem;
+
+		div {
+			width: 5.5rem;
+			height: 3.75rem;
+			display: grid;
+			place-items: center;
+			border: 1px solid var(--grey-scale-200);
+			border-radius: 1rem;
+		}
+	}
+
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		padding: 1.125rem;
+		border: 2px solid var(--grey-scale-200);
+		border-radius: 1rem;
+
+		p {
+			color: var(--grey-scale-500);
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+
+	p:first-child {
+		color: var(--grey-scale-500);
+	}
+
+	p:last-child {
+		color: var(--primary-500);
+		font-weight: bold;
+	}
+}
+
+.sign-up {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 1.5rem 3rem 1.5rem;
+
+	.form {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.25rem;
+
+		.checkbox-form {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: .75rem;
+
+			input {
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+				height: 0;
+				width: 0;
+			}
+
+			.checkmark {
+				height: 1.25rem;
+				aspect-ratio: 1 / 1;
+				border-radius: .5rem;
+				border: 3px solid var(--primary-500);
+				transition: background-color 100ms;
+			}
+
+			input:checked ~ .checkmark {
+				background-color: var(--primary-500);
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_6721">
+			<rect id="Iconly/Broken/Search" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Broken/Search" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_6721)">
+		<path id="Search" d="M21.75 20.6L18.31 17.24L18.23 17.12C18.08 16.97 17.88 16.89 17.66 16.89C17.45 16.89 17.25 16.97 17.1 17.12C14.17 19.8 9.67 19.94 6.58 17.46C3.48 14.97 2.75 10.63 4.87 7.31C6.99 3.98 11.3 2.71 14.95 4.34C18.59 5.96 20.44 9.98 19.26 13.72C19.18 13.99 19.25 14.29 19.44 14.49C19.64 14.7 19.94 14.79 20.22 14.73C20.5 14.66 20.73 14.46 20.81 14.19C22.22 9.74 20.09 4.96 15.81 2.94C11.53 0.91 6.38 2.25 3.68 6.08C0.99 9.91 1.57 15.1 5.04 18.27C8.52 21.45 13.84 21.67 17.58 18.79L20.62 21.77C20.94 22.07 21.45 22.07 21.76 21.77C22.07 21.46 22.07 20.96 21.76 20.65L21.75 20.6Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

@@ -1,0 +1,37 @@
+.input-base {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	gap: .75rem;
+	padding: 1.25rem;
+	background-color: var(--grey-scale-50);
+	border-radius: 1rem;
+	border: 1px solid transparent;
+	transition: all 200ms;
+
+	img {
+		filter: brightness(0) saturate(100%) invert(66%) sepia(0%) saturate(0%) hue-rotate(162deg) brightness(95%) contrast(96%);
+	}
+
+	input {
+		width: 100%;
+		box-sizing: border-box;
+		outline: none;
+		border: none;
+		color: var(--dark-one);
+		background-color: transparent;
+		border-radius: 1rem;
+		font-size: 1rem;
+		caret-color: var(--primary-500);
+	}
+}
+
+.input-correct {
+	background-color: var(--transparent-green);
+	border: 1px solid var(--primary-500);
+
+	img {
+		filter: brightness(0) saturate(100%) invert(57%) sepia(19%) saturate(4283%) hue-rotate(99deg) brightness(93%) contrast(95%);
+	}
+}

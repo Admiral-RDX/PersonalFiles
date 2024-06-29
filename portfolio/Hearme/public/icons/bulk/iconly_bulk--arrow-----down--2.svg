@@ -1,0 +1,18 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_9531">
+			<rect id="Iconly/Bulk/Arrow - Down 2" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Bulk/Arrow - Down 2" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_9531)">
+		<rect id="Iconly/Bulk/Arrow - Down 2" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Fill 1" d="M10.86 7.21L15.08 14.06C15.18 14.21 15.17 14.41 15.06 14.55C14.55 15.2 14.05 15.78 13.62 16.17C13.62 16.17 13.28 16.5 13.06 16.65C12.76 16.88 12.38 17 12 17C11.58 17 11.18 16.87 10.86 16.63C10.8 16.57 10.55 16.36 10.35 16.16C9.07 14.99 6.96 11.94 6.33 10.34C6.22 10.1 6.01 9.48 6 9.16C6 8.84 6.06 8.54 6.21 8.25C6.42 7.9 6.73 7.62 7.11 7.46C7.37 7.36 8.16 7.21 8.18 7.21C8.74 7.11 9.53 7.03 10.45 7C10.62 6.99 10.78 7.07 10.86 7.21Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<g opacity="0.400000" style="mix-blend-mode:normal">
+			<path id="Fill 4" d="M13.13 7.67C12.95 7.37 13.19 6.99 13.55 7C14.39 7.04 15.13 7.1 15.68 7.17C15.69 7.19 16.67 7.34 17 7.52C17.62 7.83 18 8.44 18 9.1L18 9.16C17.98 9.58 17.61 10.48 17.58 10.48C17.4 10.94 17.08 11.53 16.69 12.17C16.52 12.45 16.09 12.46 15.91 12.17L13.13 7.67Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+</svg>

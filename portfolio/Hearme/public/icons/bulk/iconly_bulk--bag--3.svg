@@ -1,0 +1,17 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_9805">
+			<rect id="Iconly/Bulk/Bag 3" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Bulk/Bag 3" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_9805)">
+		<g opacity="0.400000" style="mix-blend-mode:normal">
+			<path id="Fill 4" d="M16.62 22L7.37 22C4.68 22 2.5 19.83 2.5 17.16L2.5 11.83C2.5 9.16 4.68 7 7.37 7L16.62 7C19.31 7 21.5 9.16 21.5 11.83L21.5 17.16C21.5 19.83 19.31 22 16.62 22Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+		<path id="Fill 1" d="M15.75 10C15.34 10 15.01 9.67 15.01 9.27L15.01 6.35C15.01 4.75 13.66 3.44 12 3.44C11.24 3.44 10.44 3.74 9.87 4.28C9.3 4.83 8.99 5.56 8.98 6.34L8.98 9.27C8.98 9.67 8.65 10 8.24 10C7.83 10 7.5 9.67 7.5 9.27L7.5 6.35C7.5 5.17 7.97 4.08 8.82 3.26C9.68 2.44 10.78 2.03 12.01 2C14.48 2 16.5 3.95 16.5 6.35L16.5 9.27C16.5 9.67 16.16 10 15.75 10Z" fill="#212121" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_7287">
+			<rect id="Iconly/Two-tone/Plus" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Two-tone/Plus" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_7287)">
+		<g opacity="0.400000" style="mix-blend-mode:normal">
+			<path id="Union" d="M12.0002 7.57715C12.4202 7.57715 12.7502 7.90723 12.7502 8.32715L12.7502 11.2402L15.6667 11.2402C16.0869 11.2402 16.4167 11.5703 16.4167 11.9902C16.4167 12.4102 16.0869 12.7402 15.6667 12.7402L12.7502 12.7402L12.7502 15.6533C12.7502 16.0737 12.4202 16.4033 12.0002 16.4033C11.5801 16.4033 11.2502 16.0737 11.2502 15.6533L11.2502 12.7402L8.3335 12.7402C7.91357 12.7402 7.5835 12.4102 7.5835 11.9902C7.5835 11.5703 7.91357 11.2402 8.3335 11.2402L11.2502 11.2402L11.2502 8.32715C11.2502 7.90723 11.5801 7.57715 12.0002 7.57715Z" clip-rule="evenodd" fill="#212121" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+		<path id="Path" d="M7.31 2C4.04 2 2 4.31 2 7.58L2 16.41C2 19.68 4.03 22 7.31 22L16.68 22C19.96 22 22 19.68 22 16.41L22 7.58C22 4.31 19.96 2 16.68 2L7.31 2Z" stroke="#212121" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round"/>
+	</g>
+</svg>

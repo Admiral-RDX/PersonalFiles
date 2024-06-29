@@ -1,0 +1,15 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_8152">
+			<rect id="Iconly/Curved/Location" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Curved/Location" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_8152)">
+		<path id="Stroke 1" d="M12 8.2C10.62 8.2 9.51 9.32 9.51 10.71C9.51 12.09 10.62 13.21 12 13.21C13.39 13.21 14.51 12.09 14.51 10.71C14.51 9.32 13.39 8.2 12 8.2Z" stroke="#212121" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round"/>
+		<path id="Stroke 3" d="M4.5 10.59C4.5 6.4 7.85 3 11.99 3C16.14 3 19.5 6.4 19.5 10.59C19.5 15.95 14.89 21 11.99 21C9.1 21 4.5 15.95 4.5 10.59Z" stroke="#212121" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round"/>
+	</g>
+</svg>

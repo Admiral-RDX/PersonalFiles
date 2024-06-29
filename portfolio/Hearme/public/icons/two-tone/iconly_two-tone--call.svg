@@ -1,0 +1,17 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_7550">
+			<rect id="Iconly/Two-tone/Call" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Two-tone/Call" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_7550)">
+		<path id="Stroke 1" d="M18.96 14.38C21.41 16.83 22.82 17.32 19.71 20.42C19.33 20.73 16.86 24.49 8.18 15.81C-0.5 7.14 3.26 4.67 3.57 4.28C6.68 1.17 7.16 2.58 9.61 5.03C12.15 7.57 7.54 8.48 11.53 12.47C15.52 16.46 16.42 11.84 18.96 14.38Z" stroke="#212121" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round"/>
+		<g opacity="0.400000" style="mix-blend-mode:normal">
+			<path id="Stroke 3" d="M14.35 6.04C16.12 6.38 17.5 7.77 17.85 9.54" stroke="#212121" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		</g>
+	</g>
+</svg>

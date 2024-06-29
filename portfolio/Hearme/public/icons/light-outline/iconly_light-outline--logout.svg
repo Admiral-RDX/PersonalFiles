@@ -1,0 +1,26 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_8668">
+			<rect id="Iconly/Light-Outline/Logout" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Light-Outline/Logout" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_8668)">
+		<path id="Fill 1" d="M11.31 22L6.43 22C3.98 22 2 20.01 2 17.56L2 6.43C2 3.98 3.98 2 6.43 2L11.3 2C13.75 2 15.74 3.98 15.74 6.43L15.74 7.36C15.74 7.78 15.4 8.11 14.99 8.11C14.58 8.11 14.24 7.78 14.24 7.36L14.24 6.43C14.24 4.81 12.92 3.5 11.3 3.5L6.43 3.5C4.81 3.5 3.5 4.81 3.5 6.43L3.5 17.56C3.5 19.18 4.81 20.5 6.43 20.5L11.31 20.5C12.93 20.5 14.24 19.18 14.24 17.57L14.24 16.63C14.24 16.21 14.58 15.88 14.99 15.88C15.4 15.88 15.74 16.21 15.74 16.63L15.74 17.57C15.74 20.01 13.75 22 11.31 22Z" fill="#212121" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<mask id="mask430_8672" mask-type="alpha" maskUnits="userSpaceOnUse" x="8.996094" y="11.250000" width="13.541016" height="1.500000">
+			<path id="Clip 4" d="M8.99 11.25L22.53 11.25L22.53 12.75L8.99 12.75L8.99 11.25Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</mask>
+		<g mask="url(#mask430_8672)">
+			<path id="Fill 3" d="M21.78 12.75L9.74 12.75C9.33 12.75 8.99 12.41 8.99 12C8.99 11.58 9.33 11.25 9.74 11.25L21.78 11.25C22.2 11.25 22.53 11.58 22.53 12C22.53 12.41 22.2 12.75 21.78 12.75Z" fill="#212121" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+		<mask id="mask430_8675" mask-type="alpha" maskUnits="userSpaceOnUse" x="18.109619" y="8.335205" width="4.427246" height="7.330811">
+			<path id="Clip 7" d="M18.1 8.33L22.53 8.33L22.53 15.66L18.1 15.66L18.1 8.33Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</mask>
+		<g mask="url(#mask430_8675)">
+			<path id="Fill 6" d="M18.85 15.66C18.66 15.66 18.47 15.59 18.32 15.44C18.03 15.15 18.03 14.67 18.33 14.38L20.72 12L18.33 9.61C18.03 9.32 18.03 8.84 18.32 8.55C18.62 8.26 19.09 8.26 19.38 8.55L22.31 11.46C22.45 11.6 22.53 11.8 22.53 12C22.53 12.19 22.45 12.39 22.31 12.53L19.38 15.44C19.24 15.59 19.05 15.66 18.85 15.66Z" fill="#212121" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip430_7499">
+			<rect id="Iconly/Two-tone/Unlock" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Iconly/Two-tone/Unlock" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip430_7499)">
+		<g opacity="0.400000" style="mix-blend-mode:normal">
+			<path id="Stroke 1" d="M16.42 5.56C15.8 3.78 14.11 2.5 12.12 2.5C9.6 2.49 7.56 4.51 7.55 7.03L7.55 7.05L7.55 9.19" stroke="#212121" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		</g>
+		<path id="Stroke 3" d="M8.29 21C6.19 21 4.5 19.3 4.5 17.2L4.5 12.91C4.5 10.82 6.19 9.12 8.29 9.12L15.93 9.12C18.02 9.12 19.72 10.82 19.72 12.91L19.72 17.2C19.72 19.3 18.02 21 15.93 21L8.29 21Z" stroke="#212121" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round"/>
+		<path id="Stroke 5" d="M12.11 13.95L12.11 16.17" stroke="#212121" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+	</g>
+</svg>
