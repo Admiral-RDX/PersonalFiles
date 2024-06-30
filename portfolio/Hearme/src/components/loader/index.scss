@@ -1,0 +1,47 @@
+$size: 60px;
+$dot-size: $size / 8;
+$center: $size / 2;
+$radius: $center - $dot-size;
+$pi: 3.14159265359;
+
+@mixin position($angle) {
+	top: $center + $radius * cos($angle) - $dot-size / 2;
+	left: $center + $radius * sin($angle) - $dot-size / 2;
+}
+
+.loading-default,
+.loading-default div {
+	box-sizing: border-box;
+}
+
+.loading-default {
+	display: inline-block;
+	position: relative;
+	width: $size;
+	height: $size;
+}
+
+.loading-default div {
+	position: absolute;
+	width: $dot-size;
+	height: $dot-size;
+	background: var(--gradient-green);
+	border-radius: 50%;
+	animation: loading-default 1.2s linear infinite;
+}
+
+@for $i from 1 through 8 {
+	.loading-default div:nth-child(#{$i}) {
+		animation-delay: #{-0.15 * ($i - 1)}s;
+		@include position(2 * $pi * ($i - 1) / 8);
+	}
+}
+
+@keyframes loading-default {
+	0%, 20%, 80%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(2);
+	}
+}

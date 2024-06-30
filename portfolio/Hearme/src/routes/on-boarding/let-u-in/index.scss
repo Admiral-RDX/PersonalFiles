@@ -1,0 +1,64 @@
+.lets-you-in {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	p {
+		align-self: center;
+	}
+
+	&--icon {
+		background-image: url("/icons/brand/lets-you-in-icon.svg");
+		width: 237px;
+		height: 200px;
+		align-self: center;
+	}
+
+	&--options {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		color: var(--grey-scale-900);
+	}
+
+	&--variant {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1.25rem;
+		border-radius: 1rem;
+		gap: 1rem;
+		background-color: var(--dark-two);
+		border: 1px solid var(--dark-three);
+	}
+
+	&--google-img {
+		background-image: url("/icons/firms/google.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 24px;
+		width: 24px;
+	}
+
+	&--facebook-img {
+		background-image: url("/icons/firms/facebook.svg");
+		height: 24px;
+		width: 24px;
+	}
+
+	&--apple-img {
+		background-image: url("/icons/firms/apple-light.svg");
+		height: 24px;
+		width: 24px;
+	}
+}
+
+html[data-theme="dark"] .lets-you-in {
+	&--options {
+		color: var(--others-white);
+	}
+
+	&--apple-img {
+		background-image: url("/icons/firms/apple-dark.svg");
+	}
+}

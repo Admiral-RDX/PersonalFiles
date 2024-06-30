@@ -1,0 +1,14 @@
+.on-boarding {
+	width: calc(100vw - 3rem);
+	padding: 1.5rem 1.5rem 3rem 1.5rem;
+	height: calc(100vh - 4.5rem);
+	display: flex;
+	overflow-x: auto;
+	flex-wrap: nowrap;
+	gap: 3rem;
+
+	&--child {
+		width: calc(100vw - 3rem);
+		flex: 0 0 auto;
+	}
+}

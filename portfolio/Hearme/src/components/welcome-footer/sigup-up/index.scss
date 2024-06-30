@@ -1,0 +1,22 @@
+.sign-up-footer {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	justify-content: center;
+
+	p:first-child {
+		color: var(--grey-scale-500);
+	}
+
+	p:last-child {
+		color: var(--primary-500);
+	}
+}
+
+html[data-theme="dark"] {
+	.sign-up-footer {
+		p:first-child {
+			color: var(--others-white);
+		}
+	}
+}
