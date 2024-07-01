@@ -1,0 +1,42 @@
+.login-menu {
+	width: 100%;
+	max-width: 480px;
+	padding: 2rem;
+	display: grid;
+	grid-gap: 3rem;
+
+	p {
+		color: white;
+		font-size: 2rem;
+	}
+
+	&--header {
+		text-align: center;
+	}
+
+	&--path {
+		padding: 1.25rem 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		border-radius: .5rem;
+		border: 1px solid var(--border);
+		transition: background-color 200ms ease-in-out;
+		cursor: pointer;
+
+		p {
+			font-size: 1.25rem;
+		}
+
+		&:hover {
+			background-color: var(--dark-2);
+		}
+
+		&--google {
+			background: url("/icons/google.svg") no-repeat center;
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+	}
+}
