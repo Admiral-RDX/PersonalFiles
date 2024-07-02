@@ -1,7 +1,7 @@
 import van from 'vanjs-core';
 import './login.scss';
 import { googleSignInPopup } from '../../firebase/helpers.ts';
-import { routeTo } from 'vanjs-router';
+import { navigate } from 'vanjs-routing';
 
 const { div, p } = van.tags as any;
 
@@ -19,9 +19,7 @@ export default function Login() {
         div(
             {
                 class: 'login-menu--path',
-                onclick: () => {
-                    routeTo('calendar');
-                },
+                onclick: () => navigate('/calendar'),
             },
             p('Go to Calendar')
         )

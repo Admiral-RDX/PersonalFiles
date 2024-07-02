@@ -1,25 +1,21 @@
 import './styles/global.scss';
-import van from 'vanjs-core';
+import 'firebase/compat/auth';
+import { Router } from 'vanjs-routing';
 import Login from './routes/login/login.ts';
-import { Route } from 'vanjs-router';
+import Authenticating from './routes/authenticating/auth.ts';
 import Dashboard from './routes/dashboard/dashboard.ts';
 import Calendar from './routes/calendar/calendar.ts';
-import Authenticating from './routes/authenticating/auth.ts';
+import { authGuard } from './firebase/helpers.ts';
 
-const { div } = van.tags as any;
-
-export const Router = () => {
-    return div(
-        Route({ name: 'login' }, Login),
-        Route({ name: 'dashboard' }, Dashboard),
-        Route({ name: 'calendar' }, Calendar),
-        Route({ name: 'auth' }, Authenticating),
-        () => {
-            handleProtectedRoutes();
-        }
-    );
+export const App = () => {
+    return Router({
+        basename: '',
+        routes: [
+            // Guard is executed for every route
+            { path: '/', component: authGuard(Login) },
+            { path: '/auth', component: authGuard(Authenticating) },
+            { path: '/dashboard', component: authGuard(Dashboard) },
+            { path: '/calendar', component: authGuard(Calendar) },
+        ],
+    });
 };
-
-function handleProtectedRoutes() {
-    console.log(window.location.hash);
-}
