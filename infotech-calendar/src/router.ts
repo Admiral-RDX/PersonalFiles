@@ -1,11 +1,10 @@
-import './styles/global.scss';
+import './global.scss';
 import 'firebase/compat/auth';
-import { Router } from 'vanjs-routing';
+import { navigate, Router } from 'vanjs-routing';
 import Login from './routes/login/login.ts';
-import Authenticating from './routes/authenticating/auth.ts';
 import Dashboard from './routes/dashboard/dashboard.ts';
 import Calendar from './routes/calendar/calendar.ts';
-import { authGuard } from './firebase/helpers.ts';
+import { isUserAuthorized } from './firebase/helpers.ts';
 
 export const App = () => {
     return Router({
@@ -13,9 +12,28 @@ export const App = () => {
         routes: [
             // Guard is executed for every route
             { path: '/', component: authGuard(Login) },
-            { path: '/auth', component: authGuard(Authenticating) },
             { path: '/dashboard', component: authGuard(Dashboard) },
-            { path: '/calendar', component: authGuard(Calendar) },
+            { path: '/calendar', component: Calendar },
         ],
     });
 };
+
+function authGuard(child: any) {
+    const destination = window.location.pathname;
+
+    isUserAuthorized().then((isAuthorized) => {
+        if (!isAuthorized) {
+            if (destination !== '/dashboard') {
+                navigate(destination);
+            } else {
+                navigate('/');
+            }
+        } else {
+            if (destination === '/') {
+                navigate('/dashboard');
+            }
+        }
+    });
+
+    return child;
+}

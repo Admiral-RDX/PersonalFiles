@@ -14,37 +14,14 @@ export function googleSignInPopup() {
         });
 }
 
-function getUserAuth() {
+export function isUserAuthorized(): Promise<boolean> {
     return new Promise((resolve) => {
         firebase.auth().onAuthStateChanged((user) => {
-            resolve(user);
-            return user;
-        });
-    });
-}
-
-export function authGuard(Component: () => HTMLElement): () => HTMLElement {
-    return (): HTMLElement => {
-        const endPath = window.location.pathname;
-
-        getUserAuth().then((user) => {
-            if (endPath === '/auth') {
-                handleAuthRoute(user);
+            if (user) {
+                resolve(true);
             } else {
-                handleOtherRoutes(user, endPath);
+                resolve(false);
             }
         });
-
-        return Component();
-    };
-}
-
-function handleAuthRoute(user: any): void {
-    user ? navigate('/dashboard') : navigate('/');
-}
-
-function handleOtherRoutes(user: any, endPath: string): void {
-    user
-        ? navigate(endPath === '/' ? '/dashboard' : endPath)
-        : navigate(endPath === '/calendar' ? '/calendar' : '/');
+    });
 }
