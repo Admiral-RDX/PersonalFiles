@@ -13,3 +13,8 @@ export type Paths = {
     DASHBOARD: string;
     CALENDAR: string;
 };
+
+export type AppData = {
+    events: any[];
+    search_limit: number;
+};

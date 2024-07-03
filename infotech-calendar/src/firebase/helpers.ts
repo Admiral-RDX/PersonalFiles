@@ -1,6 +1,8 @@
 import firebase from 'firebase/compat/app';
-import { google_auth_provider } from './init.ts';
+import { db, google_auth_provider } from './init.ts';
 import { navigate } from 'vanjs-routing';
+import { collection, getDocs } from 'firebase/firestore';
+import { app_data } from '../config.ts';
 
 export function googleSignInPopup() {
     firebase
@@ -24,4 +26,16 @@ export function isUserAuthorized(): Promise<boolean> {
             }
         });
     });
+}
+
+export async function fetchEventData(): Promise<void> {
+    try {
+        const querySnapshot = await getDocs(collection(db, 'events'));
+        app_data.events = querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+        }));
+    } catch (error) {
+        console.error('Error fetching data: ', error);
+    }
 }

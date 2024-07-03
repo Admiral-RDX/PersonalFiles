@@ -1,4 +1,4 @@
-import { FirebaseConfig, Paths } from './module';
+import { AppData, FirebaseConfig, Paths } from './module';
 
 export const firebaseConfig: FirebaseConfig = {
     apiKey: 'AIzaSyCsiHKSvj1BCXyQXCfTGbWaG6S54SoiYLE',
@@ -14,4 +14,9 @@ export const ROUTES: Paths = {
     LOGIN: 'login',
     DASHBOARD: 'dashboard',
     CALENDAR: 'calendar',
+};
+
+export const app_data: AppData = {
+    events: [],
+    search_limit: 50,
 };
