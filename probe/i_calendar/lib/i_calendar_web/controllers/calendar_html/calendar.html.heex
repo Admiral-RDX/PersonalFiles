@@ -1,0 +1,108 @@
+<%!-- <div class="w-full h-full grid grid-cols-7" id="weeks-container">
+    <div class="p-4 flex flex-col gap-4 py-8">
+        <h3 class="text-[50px] font-bold text-[#6480FC]">1</h3>
+        <p class="text-[#C5C5C5] text-base">Some event details</p>
+    </div>
+    <div class="p-4 flex flex-col gap-4 py-8">
+        <h3 class="text-[50px] font-bold text-[#6480FC]">1</h3>
+        <p class="text-[#C5C5C5] text-base">Some event details</p>
+    </div>
+    <div class="p-4 flex flex-col gap-4 py-8">
+        <h3 class="text-[50px] font-bold text-[#6480FC]">1</h3>
+        <p class="text-[#C5C5C5] text-base">Some event details</p>
+    </div>
+    <div class="p-4 flex flex-col gap-4 py-8">
+        <h3 class="text-[50px] font-bold text-[#6480FC]">1</h3>
+        <p class="text-[#C5C5C5] text-base">Some event details</p>
+    </div>
+    <div class="p-4 flex flex-col gap-4 py-8">
+        <h3 class="text-[50px] font-bold text-[#6480FC]">1</h3>
+        <p class="text-[#C5C5C5] text-base">Some event details</p>
+    </div>
+    <div class="p-4 flex flex-col gap-4 py-8">
+        <h3 class="text-[50px] font-bold text-gray-500">1</h3>
+        <p class="text-[#C5C5C5] text-base">Some event details</p>
+    </div>
+    <div class="p-4 flex flex-col gap-4 py-8">
+        <h3 class="text-[50px] font-bold text-gray-500">1</h3>
+        <p class="text-[#C5C5C5] text-base">Some event details</p>
+    </div>
+</div> --%>
+
+<div class="overflow-y-auto">
+<div class="w-full h-full grid grid-cols-7" id="weeks-container"></div>
+</div>
+
+<script>
+        const container = document.getElementById('weeks-container');
+
+        const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        const isLeapYear = (year) => {
+            return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+        };
+
+        const createCalendar = (year) => {
+            if (isLeapYear(year)) {
+                daysInMonth[1] = 29;
+            } else {
+                daysInMonth[1] = 28;
+            }
+
+            const date = new Date();
+            const currentDay = 8; // Assuming today's date is July 8th
+            const currentMonth = 6; // July (0-based index for months)
+            const currentYear = 2024;
+
+            for (let month = 0; month < 12; month++) {
+                // Create empty slots for days before the first day of the month
+                const firstDay = new Date(year, month, 1).getDay();
+                for (let emptySlot = 0; emptySlot < firstDay; emptySlot++) {
+                    const emptyDiv = document.createElement('div');
+                    emptyDiv.className = 'p-4 flex flex-col gap-4 py-8';
+                    container.appendChild(emptyDiv);
+                }
+
+                for (let day = 1; day <= daysInMonth[month]; day++) {
+                    const dayDiv = document.createElement('div');
+                    const dayNumber = document.createElement('h3');
+
+                    if (day === currentDay && month === currentMonth && year === currentYear) {
+                        dayDiv.className = 'p-4 flex flex-col gap-4 py-8 bg-[#6480FC]';
+                        dayNumber.className = 'text-[50px] font-bold text-white';
+                        dayDiv.id = `event_${year}_${month + 1}_${day}`;
+                    } else {
+                        dayDiv.className = 'p-4 flex flex-col gap-4 py-8';
+                        dayNumber.className = 'text-[50px] font-bold text-[#6480FC]';
+                        dayDiv.id = `event_${year}_${month + 1}_${day}`;
+                    }
+
+                    dayNumber.textContent = day;
+
+                    const eventDetails = document.createElement('p');
+                    eventDetails.className = 'text-[#C5C5C5] text-base';
+                    eventDetails.textContent = `${monthNames[month]} ${day}, Some event details`;
+
+                    dayDiv.appendChild(dayNumber);
+                    dayDiv.appendChild(eventDetails);
+
+                    container.appendChild(dayDiv);
+                }
+            }
+        };
+
+        createCalendar(2024);
+
+        const cloneContainer = container.cloneNode(true);
+        container.parentNode.appendChild(cloneContainer);
+
+        window.onload = () => {
+            const currentEventId = 'event_2024_7_8';
+            const currentEventElement = document.getElementById(currentEventId);
+
+            if (currentEventElement) {
+                currentEventElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        };
+    </script>
