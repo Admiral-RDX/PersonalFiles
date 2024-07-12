@@ -50,5 +50,4 @@ defmodule ICalendarWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug ICalendarWeb.Router
-  plug ICalendarWeb.ErrorHTML
 end
