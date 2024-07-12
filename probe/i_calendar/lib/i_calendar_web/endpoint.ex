@@ -7,7 +7,7 @@ defmodule ICalendarWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_i_calendar_key",
-    signing_salt: "42FMXekr",
+    signing_salt: "rMF5Sr3q",
     same_site: "Lax"
   ]
 
@@ -50,4 +50,5 @@ defmodule ICalendarWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug ICalendarWeb.Router
+  plug ICalendarWeb.ErrorHTML
 end

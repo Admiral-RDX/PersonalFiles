@@ -1,4 +1,19 @@
 defmodule ICalendarWeb.CoreComponents do
+  @moduledoc """
+  Provides core UI components.
+
+  At first glance, this module may seem daunting, but its goal is to provide
+  core building blocks for your application, such as modals, tables, and
+  forms. The components consist mostly of markup and are well-documented
+  with doc strings and declarative assigns. You may customize and style
+  them in any way you want, based on your application growth and needs.
+
+  The default components use Tailwind CSS, a utility-first CSS framework.
+  See the [Tailwind CSS documentation](https://tailwindcss.com) to learn
+  how to customize them or feel free to swap in another framework altogether.
+
+  Icons are provided by [heroicons](https://heroicons.com). See `icon/1` for usage.
+  """
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
@@ -74,6 +89,14 @@ defmodule ICalendarWeb.CoreComponents do
     """
   end
 
+  @doc """
+  Renders flash notices.
+
+  ## Examples
+
+      <.flash kind={:info} flash={@flash} />
+      <.flash kind={:info} phx-mounted={show("#flash")}>Welcome Back!</.flash>
+  """
   attr :id, :string, doc: "the optional id of flash container"
   attr :flash, :map, default: %{}, doc: "the map of flash messages to display"
   attr :title, :string, default: nil
@@ -88,6 +111,7 @@ defmodule ICalendarWeb.CoreComponents do
     ~H"""
     <div
       :if={msg = render_slot(@inner_block) || Phoenix.Flash.get(@flash, @kind)}
+      id={@id}
       phx-click={JS.push("lv:clear-flash", value: %{key: @kind}) |> hide("##{@id}")}
       role="alert"
       class={[
@@ -178,7 +202,7 @@ defmodule ICalendarWeb.CoreComponents do
   def simple_form(assigns) do
     ~H"""
     <.form :let={f} for={@for} as={@as} {@rest}>
-      <div class="mt-10 space-y-8">
+      <div class="mt-10 space-y-8 bg-white">
         <%= render_slot(@inner_block, f) %>
         <div :for={action <- @actions} class="mt-2 flex items-center justify-between gap-6">
           <%= render_slot(action, f) %>
@@ -207,7 +231,8 @@ defmodule ICalendarWeb.CoreComponents do
     <button
       type={@type}
       class={[
-        "w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800",
+        "phx-submit-loading:opacity-75 rounded-lg bg-zinc-900 hover:bg-zinc-700 py-2 px-3",
+        "text-sm font-semibold leading-6 text-white active:text-white/80",
         @class
       ]}
       {@rest}
@@ -285,7 +310,7 @@ defmodule ICalendarWeb.CoreComponents do
 
     ~H"""
     <div>
-      <label for="remember" class="text-gray-500 dark:text-gray-300 flex items-center gap-2">
+      <label class="flex items-center gap-4 text-sm leading-6 text-zinc-600">
         <input type="hidden" name={@name} value="false" disabled={@rest[:disabled]} />
         <input
           type="checkbox"
@@ -293,7 +318,7 @@ defmodule ICalendarWeb.CoreComponents do
           name={@name}
           value="true"
           checked={@checked}
-          class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+          class="rounded border-zinc-300 text-zinc-900 focus:ring-0"
           {@rest}
         />
         <%= @label %>
@@ -344,7 +369,7 @@ defmodule ICalendarWeb.CoreComponents do
   # All other inputs text, datetime-local, url, password, etc. are handled here...
   def input(assigns) do
     ~H"""
-    <div class="flex flex-col gap-1">
+    <div>
       <.label for={@id}><%= @label %></.label>
       <input
         type={@type}
@@ -352,7 +377,7 @@ defmodule ICalendarWeb.CoreComponents do
         id={@id}
         value={Phoenix.HTML.Form.normalize_value(@type, @value)}
         class={[
-          "bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
+          "mt-2 block w-full rounded-lg text-zinc-900 focus:ring-0 sm:text-sm sm:leading-6",
           @errors == [] && "border-zinc-300 focus:border-zinc-400",
           @errors != [] && "border-rose-400 focus:border-rose-400"
         ]}
@@ -371,7 +396,7 @@ defmodule ICalendarWeb.CoreComponents do
 
   def label(assigns) do
     ~H"""
-    <label for={@for} class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+    <label for={@for} class="block text-sm font-semibold leading-6 text-zinc-800">
       <%= render_slot(@inner_block) %>
     </label>
     """

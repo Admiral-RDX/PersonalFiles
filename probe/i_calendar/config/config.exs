@@ -20,7 +20,7 @@ config :i_calendar, ICalendarWeb.Endpoint,
     layout: false
   ],
   pubsub_server: ICalendar.PubSub,
-  live_view: [signing_salt: "KhSoRdHD"]
+  live_view: [signing_salt: "qMe8XKpj"]
 
 # Configures the mailer
 #

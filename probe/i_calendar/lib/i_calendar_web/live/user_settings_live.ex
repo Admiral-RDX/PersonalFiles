@@ -5,7 +5,12 @@ defmodule ICalendarWeb.UserSettingsLive do
 
   def render(assigns) do
     ~H"""
-    <div class="space-y-12 divide-y mx-auto w-full text-lg py-5 sm:py-10">
+    <.header class="text-center">
+      Account Settings
+      <:subtitle>Manage your account email address and password settings</:subtitle>
+    </.header>
+
+    <div class="space-y-12 divide-y">
       <div>
         <.simple_form
           for={@email_form}

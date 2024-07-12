@@ -31,8 +31,8 @@ defmodule ICalendarWeb.UserResetPasswordLive do
       </.simple_form>
 
       <p class="text-center text-sm mt-4">
-        <%!-- <.link href={~p"/users/register"}>Register</.link> --%>
-        <.link href={~p"/users/log_in"}>Log in</.link>
+        <.link href={~p"/users/register"}>Register</.link>
+        | <.link href={~p"/users/log_in"}>Log in</.link>
       </p>
     </div>
     """
@@ -79,7 +79,7 @@ defmodule ICalendarWeb.UserResetPasswordLive do
     else
       socket
       |> put_flash(:error, "Reset password link is invalid or it has expired.")
-      |> redirect(to: ~p"/dashboard")
+      |> redirect(to: ~p"/")
     end
   end
 

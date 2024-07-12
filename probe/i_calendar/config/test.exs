@@ -20,7 +20,7 @@ config :i_calendar, ICalendar.Repo,
 # you can enable the server option below.
 config :i_calendar, ICalendarWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "WQKdUezLOb8V+qLJT7eXJlNKd23Zo24xMaci7k8/it91ijf+/B+jUIL/yniNo3Ug",
+  secret_key_base: "XOoBsCj2XVQG3nS1Ke6lZCvW1qH5JzhPjtAFnSJ5NvhiVxVGMvGugvtjHApP+mlV",
   server: false
 
 # In test we don't send emails

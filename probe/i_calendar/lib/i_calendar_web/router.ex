@@ -19,6 +19,8 @@ defmodule ICalendarWeb.Router do
 
   scope "/", ICalendarWeb do
     pipe_through :browser
+
+    get "/", PageController, :home
   end
 
   # Other scopes may use custom stacks.
@@ -26,11 +28,18 @@ defmodule ICalendarWeb.Router do
   #   pipe_through :api
   # end
 
+  # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:i_calendar, :dev_routes) do
+    # If you want to use the LiveDashboard in production, you should put
+    # it behind authentication and allow only admins to access it.
+    # If your application does not have an admins-only section yet,
+    # you can use Plug.BasicAuth to set up some basic authentication
+    # as long as you are also using SSL (which you should anyway).
     import Phoenix.LiveDashboard.Router
 
     scope "/dev" do
       pipe_through :browser
+
       live_dashboard "/dashboard", metrics: ICalendarWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
@@ -43,10 +52,10 @@ defmodule ICalendarWeb.Router do
 
     live_session :redirect_if_user_is_authenticated,
       on_mount: [{ICalendarWeb.UserAuth, :redirect_if_user_is_authenticated}] do
-      # live "/users/register", UserRegistrationLive, :new
+      live "/users/register", UserRegistrationLive, :new
       live "/users/log_in", UserLoginLive, :new
-      # live "/users/reset_password", UserForgotPasswordLive, :new
-      # live "/users/reset_password/:token", UserResetPasswordLive, :edit
+      live "/users/reset_password", UserForgotPasswordLive, :new
+      live "/users/reset_password/:token", UserResetPasswordLive, :edit
     end
 
     post "/users/log_in", UserSessionController, :create
@@ -59,10 +68,10 @@ defmodule ICalendarWeb.Router do
       on_mount: [{ICalendarWeb.UserAuth, :ensure_authenticated}] do
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
+      # Adding new routes for dashboard and calendar
+      live "/dashboard", DashboardLive, :show
+      live "/calendar", CalendarLive, :show
     end
-
-    get "/dashboard", DashboardController, :dashboard
-    get "/calendar", CalendarController, :calendar
   end
 
   scope "/", ICalendarWeb do

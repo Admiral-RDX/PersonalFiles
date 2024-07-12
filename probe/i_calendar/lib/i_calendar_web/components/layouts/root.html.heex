@@ -4,26 +4,57 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
-    <.live_title>
+    <.live_title suffix=" · Phoenix Framework">
       <%= assigns[:page_title] || "ICalendar" %>
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
   </head>
-  <body class="bg-slate-900 text-whitedark:bg-gray-900 text-white">
-    <%= if @current_user do %>
-      <div class="flex items-center gap-3 mx-auto max-w-fit p-2 bg-slate-700 rounded-md mt-6">
-      <%!-- <%= @current_user.email %> --%>
-      <.link href={~p"/dashboard"}>Dashboard</.link>
-      <.link href={~p"/calendar"}>Calendar</.link>
-      <.link href={~p"/users/settings"}>Settings</.link>
-      <.link href={~p"/users/log_out"} method="delete">Log out</.link>
-      </div>
-    <% end %>
-
-    <div class="max-w-[1640px] mx-auto">
-      <%= @inner_content %>
-    </div>
+  <body class="bg-white">
+    <ul class="relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end">
+      <%= if @current_user do %>
+          <%= @current_user.email %>
+          <.link
+            href={~p"/users/settings"}
+            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+          >
+            Settings
+          </.link>
+          <.link
+            href={~p"/dashboard"}
+            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+          >
+            Dashboard
+          </.link>
+          <.link
+            href={~p"/calendar"}
+            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+          >
+            Calendar
+          </.link>
+          <.link
+            href={~p"/users/log_out"}
+            method="delete"
+            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+          >
+            Log out
+          </.link>
+      <% else %>
+          <.link
+            href={~p"/users/register"}
+            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+          >
+            Register
+          </.link>
+          <.link
+            href={~p"/users/log_in"}
+            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+          >
+            Log in
+          </.link>
+      <% end %>
+    </ul>
+    <%= @inner_content %>
   </body>
 </html>

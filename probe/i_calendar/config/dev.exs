@@ -5,7 +5,7 @@ config :i_calendar, ICalendar.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "learn",
+  database: "i_calendar",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -23,7 +23,7 @@ config :i_calendar, ICalendarWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "I0kiqzPtuprNGQStsVWWh7JaSX4/orlRewk8Py10EGMRMcaKXUMRavXlNXlIsR7L",
+  secret_key_base: "loKKBKyB6VGqf84dltX2Yy5RHFYQMg9XUZoZFHGNxLGVTSUTOO+uvxyxm2SPcWvF",
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:i_calendar, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:i_calendar, ~w(--watch)]}

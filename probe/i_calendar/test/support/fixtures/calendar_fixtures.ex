@@ -12,7 +12,7 @@ defmodule ICalendar.CalendarFixtures do
       attrs
       |> Enum.into(%{
         duration: 42,
-        event_date: ~D[2024-07-06],
+        event_date: ~D[2024-07-11],
         metadata: "some metadata",
         name: "some name"
       })

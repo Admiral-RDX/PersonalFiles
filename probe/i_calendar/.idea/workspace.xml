@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c4ee27b-3bcc-4dc4-929d-390cd26eb9b3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.exs" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/dev.exs" beforeDir="false" afterPath="$PROJECT_DIR$/config/dev.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/config/test.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar/dashboard.ex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/components/core_components.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/components/core_components.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/components/layouts.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/components/layouts.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/components/layouts/app.html.heex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/components/layouts/app.html.heex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/components/layouts/root.html.heex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/components/layouts/root.html.heex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/controllers/calendar_controller.ex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/controllers/calendar_html.ex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/controllers/calendar_html/calendar.html.heex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/controllers/dashboard_controller.ex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/controllers/dashboard_html.ex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/controllers/dashboard_html/dashboard.html.heex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/controllers/page_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/controllers/page_controller.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/controllers/page_html.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/controllers/page_html.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/controllers/page_html/home.html.heex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/controllers/page_html/home.html.heex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/endpoint.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/endpoint.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/live/user_confirmation_instructions_live.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/live/user_confirmation_instructions_live.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/live/user_confirmation_live.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/live/user_confirmation_live.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/live/user_forgot_password_live.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/live/user_forgot_password_live.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/live/user_login_live.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/live/user_login_live.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/live/user_reset_password_live.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/live/user_reset_password_live.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/live/user_settings_live.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/live/user_settings_live.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/router.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/router.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i_calendar_web/user_auth.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i_calendar_web/user_auth.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20240706113308_create_users_auth_tables.exs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20240707121222_create_events.exs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/priv/static/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/i_calendar/calendar_test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/test/i_calendar/calendar_test.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/support/fixtures/calendar_fixtures.ex" beforeDir="false" afterPath="$PROJECT_DIR$/test/support/fixtures/calendar_fixtures.ex" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2j9D8qIiCvrmwoNPAnp1eIlrpBo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/admiralcapo"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>
