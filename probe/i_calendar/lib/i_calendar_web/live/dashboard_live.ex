@@ -49,7 +49,7 @@ defmodule ICalendarWeb.DashboardLive do
             type="text"
             name="filter"
             value={@filter}
-            phx-debounce="400"
+            phx-debounce="800"
             placeholder="Search Mockups, Logos..."
             class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
           />

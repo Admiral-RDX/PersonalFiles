@@ -1,0 +1,40 @@
+<div class="w-[100vw] h-[100dvh] bg-black flex flex-col gap-5 px-10">
+  <div class="uppercase text-white text-lg grid grid-cols-7 font-bold py-5">
+    <p>Monday</p>
+    <p>Tuesday</p>
+    <p>Wednesday</p>
+    <p>Thursday</p>
+    <p>Friday</p>
+    <p>Saturday</p>
+    <p>Sunday</p>
+  </div>
+  <div class="overflow-y-auto">
+    <%= for month <- @months do %>
+      <div class="grid grid-cols-7 text-white py-3">
+        <%= for day <- 1..(month.days.days + month.days.first_day - 1) do %>
+          <%= if day >= month.days.first_day do %>
+            <% actual_day = day - month.days.first_day + 1 %>
+            <% date_str =
+              "#{@year}-#{String.pad_leading(Integer.to_string(month.month), 2, "0")}-#{String.pad_leading(Integer.to_string(actual_day), 2, "0")}" %>
+            <% current_class =
+              if date_str == Date.to_string(@current_date),
+                do: "bg-[#6480FC] text-white",
+                else: "text-[#C5C5C5]" %>
+            <a
+              href={"##{month.month}-#{actual_day}"}
+              id={"#{month.month}-#{actual_day}"}
+              class={"flex flex-col gap-5 w-full p-5 py-6 " <> current_class}
+            >
+              <h3 class={"font-bold text-6xl " <> (if date_str == Date.to_string(@current_date), do: "text-white", else: "text-[#6480FC]")}>
+                <%= actual_day %>
+              </h3>
+              <p class={"text-lg " <> current_class}>Evening</p>
+            </a>
+          <% else %>
+            <div class="flex flex-col gap-5 w-full p-5"></div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

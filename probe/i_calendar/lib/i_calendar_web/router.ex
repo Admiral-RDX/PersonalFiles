@@ -70,7 +70,7 @@ defmodule ICalendarWeb.Router do
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
       # Adding new routes for dashboard and calendar
       live "/dashboard", DashboardLive, :show
-      live "/calendar", CalendarLive, :show
+      get "/calendar", CalendarController, :calendar
     end
   end
 
