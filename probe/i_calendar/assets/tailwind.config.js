@@ -5,12 +5,14 @@ const plugin = require("tailwindcss/plugin")
 const fs = require("fs")
 const path = require("path")
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./js/**/*.js",
     "../lib/i_calendar_web.ex",
     "../lib/i_calendar_web/**/*.*ex"
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
