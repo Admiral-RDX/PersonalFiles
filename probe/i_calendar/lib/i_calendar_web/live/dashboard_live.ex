@@ -7,12 +7,27 @@ defmodule ICalendarWeb.DashboardLive do
 
   def mount(_params, _session, socket) do
     events = Repo.all(Event)
-    {:ok, assign(socket, events: events, filter: "")}
+    {:ok, assign(socket, events: events, filter: "", show_modal: false, selected_event: nil)}
   end
 
   def handle_event("filter", %{"filter" => filter}, socket) do
     filtered_events = filter_events(filter)
     {:noreply, assign(socket, events: filtered_events, filter: filter)}
+  end
+
+  def handle_event("edit_event", %{"id" => id}, socket) do
+    event = Repo.get(Event, id)
+    {:noreply, assign(socket, show_modal: true, selected_event: event)}
+  end
+
+  def handle_event("close_modal", _params, socket) do
+    {:noreply, assign(socket, show_modal: false, selected_event: nil)}
+  end
+
+  def handle_event("save_event", %{"event" => event_params}, socket) do
+    # Logic for saving event changes would go here, for now we'll just log it and close the modal
+    IO.inspect(event_params)
+    {:noreply, assign(socket, show_modal: false, selected_event: nil)}
   end
 
   defp filter_events(filter) do
@@ -51,7 +66,7 @@ defmodule ICalendarWeb.DashboardLive do
           value={@filter}
           phx-debounce="800"
           placeholder="Search Mockups, Logos..."
-          class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="block w-full p-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         />
       </form>
     </div>
@@ -122,12 +137,131 @@ defmodule ICalendarWeb.DashboardLive do
                 <%= event.metadata %>
               </td>
               <td class="px-6 py-4">
-                <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
+                <a
+                  href="#"
+                  phx-click="edit_event"
+                  phx-value-id={event.id}
+                  class="font-medium text-blue-400 hover:underline"
+                >
+                  Edit
+                </a>
               </td>
             </tr>
           <% end %>
         </tbody>
       </table>
+    </div>
+    <!-- Modal -->
+    <div class={"fixed z-10 inset-0 overflow-y-auto #{if @show_modal, do: "", else: "hidden"}"}>
+      <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+          <div class="absolute inset-0 bg-gray-500 dark:bg-slate-900 opacity-75"></div>
+        </div>
+
+        <div class="inline-block rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+          <div class="bg-white rounded-lg shadow dark:bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                Add Product
+              </h3>
+              <button
+                type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                phx-click="close_modal"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  >
+                  </path>
+                </svg>
+                <span class="sr-only">Close modal</span>
+              </button>
+            </div>
+
+            <div class="mt-2">
+              <form phx-submit="save_event">
+                <input
+                  type="hidden"
+                  name="event_id"
+                  value={(@selected_event && @selected_event.id) || ""}
+                />
+                <div class="mb-4">
+                  <label
+                    for="event_name"
+                    class="block text-sm font-medium text-gray-700 dark:text-white"
+                  >
+                    Event Name
+                  </label>
+                  <input
+                    type="text"
+                    name="event_name"
+                    id="event_name"
+                    value={(@selected_event && @selected_event.name) || ""}
+                    class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="event_date"
+                    class="block text-sm font-medium text-gray-700 dark:text-white"
+                  >
+                    Event Date
+                  </label>
+                  <input
+                    type="date"
+                    name="event_date"
+                    id="event_date"
+                    value={(@selected_event && @selected_event.event_date) || ""}
+                    class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="duration"
+                    class="block text-sm font-medium text-gray-700 dark:text-white"
+                  >
+                    Duration
+                  </label>
+                  <input
+                    type="text"
+                    name="duration"
+                    id="duration"
+                    value={(@selected_event && @selected_event.duration) || ""}
+                    class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="metadata"
+                    class="block text-sm font-medium text-gray-700 dark:text-white"
+                  >
+                    Metadata
+                  </label>
+                  <input
+                    type="text"
+                    name="metadata"
+                    id="metadata"
+                    value={(@selected_event && @selected_event.metadata) || ""}
+                    class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+                <.button phx-disable-with="Saving..." class="w-full">
+                  Save
+                </.button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     """
   end

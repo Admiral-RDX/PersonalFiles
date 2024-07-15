@@ -5,10 +5,10 @@ defmodule ICalendarWeb.UserSettingsLive do
 
   def render(assigns) do
     ~H"""
-    <.header class="text-center">
-      Account Settings
-      <:subtitle>Manage your account email address and password settings</:subtitle>
-    </.header>
+    <div class="text-center text-slate-800 dark:text-white">
+      <h3>Account Settings</h3>
+      <p>Manage your account email address and password settings</p>
+    </div>
 
     <div class="space-y-12 divide-y">
       <div>
