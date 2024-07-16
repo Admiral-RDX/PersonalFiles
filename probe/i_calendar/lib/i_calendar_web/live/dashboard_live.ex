@@ -6,32 +6,138 @@ defmodule ICalendarWeb.DashboardLive do
   import Ecto.Query
 
   def mount(_params, _session, socket) do
-    events = Repo.all(Event)
-    {:ok, assign(socket, events: events, filter: "", show_modal: false, selected_event: nil)}
+    events = filter_and_sort_events("", :event_date, :asc)
+
+    {:ok,
+     assign(socket,
+       events: events,
+       filter: "",
+       show_modal: false,
+       selected_event: %Event{},
+       is_new_event: false,
+       sort_by: :event_date,
+       sort_order: :asc
+     )}
   end
 
   def handle_event("filter", %{"filter" => filter}, socket) do
-    filtered_events = filter_events(filter)
-    {:noreply, assign(socket, events: filtered_events, filter: filter)}
+    sorted_events =
+      filter_and_sort_events(filter, socket.assigns.sort_by, socket.assigns.sort_order)
+
+    {:noreply, assign(socket, events: sorted_events, filter: filter)}
+  end
+
+  def handle_event("add_event", _params, socket) do
+    {:noreply, assign(socket, show_modal: true, selected_event: %Event{}, is_new_event: true)}
   end
 
   def handle_event("edit_event", %{"id" => id}, socket) do
-    event = Repo.get(Event, id)
-    {:noreply, assign(socket, show_modal: true, selected_event: event)}
+    event = Repo.get!(Event, id)
+    {:noreply, assign(socket, show_modal: true, selected_event: event, is_new_event: false)}
   end
 
   def handle_event("close_modal", _params, socket) do
-    {:noreply, assign(socket, show_modal: false, selected_event: nil)}
+    {:noreply, assign(socket, show_modal: false, selected_event: %Event{}, is_new_event: false)}
   end
 
-  def handle_event("save_event", %{"event" => event_params}, socket) do
-    # Logic for saving event changes would go here, for now we'll just log it and close the modal
-    IO.inspect(event_params)
-    {:noreply, assign(socket, show_modal: false, selected_event: nil)}
+  def handle_event(
+        "save_event",
+        %{
+          "event_id" => id,
+          "event_name" => name,
+          "event_date" => date,
+          "duration" => duration,
+          "metadata" => metadata
+        },
+        socket
+      ) do
+    event =
+      if socket.assigns.is_new_event do
+        %Event{}
+      else
+        Repo.get!(Event, id)
+      end
+
+    changeset =
+      Event.changeset(event, %{
+        name: name,
+        event_date: Date.from_iso8601!(date),
+        duration: String.to_integer(duration),
+        metadata: metadata
+      })
+
+    case if socket.assigns.is_new_event, do: Repo.insert(changeset), else: Repo.update(changeset) do
+      {:ok, _event} ->
+        sorted_events =
+          filter_and_sort_events(
+            socket.assigns.filter,
+            socket.assigns.sort_by,
+            socket.assigns.sort_order
+          )
+
+        {:noreply,
+         assign(socket,
+           show_modal: false,
+           events: sorted_events,
+           selected_event: %Event{},
+           is_new_event: false
+         )}
+
+      {:error, changeset} ->
+        {:noreply,
+         assign(socket, show_modal: true, selected_event: changeset.data, changeset: changeset)}
+    end
   end
 
-  defp filter_events(filter) do
-    from(e in Event, where: ilike(e.name, ^"%#{filter}%"))
+  def handle_event("sort", %{"field" => field}, socket) do
+    sort_order =
+      if socket.assigns.sort_by == String.to_existing_atom(field) do
+        if socket.assigns.sort_order == :asc, do: :desc, else: :asc
+      else
+        :asc
+      end
+
+    sorted_events =
+      filter_and_sort_events(socket.assigns.filter, String.to_existing_atom(field), sort_order)
+
+    {:noreply,
+     assign(socket,
+       events: sorted_events,
+       sort_by: String.to_existing_atom(field),
+       sort_order: sort_order
+     )}
+  end
+
+  def handle_event("delete_event", %{"id" => id}, socket) do
+    event = Repo.get!(Event, id)
+
+    case Repo.delete(event) do
+      {:ok, _event} ->
+        sorted_events =
+          filter_and_sort_events(
+            socket.assigns.filter,
+            socket.assigns.sort_by,
+            socket.assigns.sort_order
+          )
+
+        {:noreply,
+         assign(socket,
+           show_modal: false,
+           events: sorted_events,
+           selected_event: %Event{},
+           is_new_event: false
+         )}
+
+      {:error, _changeset} ->
+        {:noreply, assign(socket, show_modal: true, selected_event: event)}
+    end
+  end
+
+  defp filter_and_sort_events(filter, sort_by, sort_order) do
+    from(e in Event,
+      where: ilike(e.name, ^"%#{filter}%"),
+      order_by: [{^sort_order, field(e, ^sort_by)}]
+    )
     |> Repo.all()
   end
 
@@ -59,7 +165,7 @@ defmodule ICalendarWeb.DashboardLive do
         </svg>
       </div>
 
-      <form phx-submit="filter" phx-change="filter">
+      <form phx-submit="filter" phx-change="filter" class="flex items-center gap-3">
         <input
           type="text"
           name="filter"
@@ -68,6 +174,13 @@ defmodule ICalendarWeb.DashboardLive do
           placeholder="Search Mockups, Logos..."
           class="block w-full p-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         />
+        <button
+          type="button"
+          phx-click="add_event"
+          class="text-white h-[45px] bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none"
+        >
+          Add
+        </button>
       </form>
     </div>
 
@@ -78,8 +191,13 @@ defmodule ICalendarWeb.DashboardLive do
             <th scope="col" class="px-6 py-3">
               Name
             </th>
-            <th scope="col" class="px-6 py-3">
-              <div class="flex items-center">
+            <th
+              scope="col"
+              class="px-6 py-3 cursor-pointer"
+              phx-click="sort"
+              phx-value-field="event_date"
+            >
+              <div class="flex items-center gap-2">
                 Date
                 <a href="#">
                   <svg
@@ -94,8 +212,13 @@ defmodule ICalendarWeb.DashboardLive do
                 </a>
               </div>
             </th>
-            <th scope="col" class="px-6 py-3">
-              <div class="flex items-center">
+            <th
+              scope="col"
+              class="px-6 py-3 cursor-pointer"
+              phx-click="sort"
+              phx-value-field="duration"
+            >
+              <div class="flex items-center gap-2">
                 Duration
                 <a href="#">
                   <svg
@@ -111,7 +234,7 @@ defmodule ICalendarWeb.DashboardLive do
               </div>
             </th>
             <th scope="col" class="px-6 py-3">
-              Metadata
+              Type
             </th>
             <th scope="col" class="px-6 py-3">
               Action
@@ -162,7 +285,7 @@ defmodule ICalendarWeb.DashboardLive do
           <div class="bg-white rounded-lg shadow dark:bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
             <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                Add Product
+                <%= if @is_new_event, do: "Add Event", else: "Edit Event" %>
               </h3>
               <button
                 type="button"
@@ -254,9 +377,21 @@ defmodule ICalendarWeb.DashboardLive do
                     class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
-                <.button phx-disable-with="Saving..." class="w-full">
-                  Save
-                </.button>
+                <div class="flex justify-between">
+                  <.button phx-disable-with="Saving..." class="w-full me-2">
+                    Save
+                  </.button>
+                  <%= if !@is_new_event do %>
+                    <button
+                      type="button"
+                      phx-click="delete_event"
+                      phx-value-id={@selected_event.id}
+                      class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                    >
+                      Delete
+                    </button>
+                  <% end %>
+                </div>
               </form>
             </div>
           </div>
